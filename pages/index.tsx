@@ -39,7 +39,7 @@ const Home: NextPage = () => {
         <Projects />
       </section>
       {/*Contact Me */}
-      <section id="contactme " className="snap-center">
+      <section id="contact" className="snap-center">
         <ContactMe />
       </section>
     </div>

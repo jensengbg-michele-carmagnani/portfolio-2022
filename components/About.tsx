@@ -17,7 +17,7 @@ function About({}: Props) {
         about
       </h3>
       <motion.img
-        className="mb-20 md:md-0 flex-shrink-0 object-cover object-center rounded-full w-56 h-56 md:rounded-lg  md:h-95 md:w-64 xl:w-[500px] xl:h-[600px]"
+        className="mb-20 md:md-0 flex-shrink-0 object-cover object-center  w-56 h-56 md:rounded-lg  md:h-95 md:w-64 xl:w-[500px] xl:h-[600px] border border-gray-500/60 rounded-sm"
         initial={{ x: -400, opacity: 0 }}
         transition={{ duration: 1.5 }}
         whileInView={{

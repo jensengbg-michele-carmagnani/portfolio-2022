@@ -19,7 +19,7 @@ const Header: React.FC = (props: Props) => {
         <SocialIcon
           bgColor="transparent"
           fgColor="gray"
-          url="https://www.linkedin.com"
+          url="https://www.linkedin.com/in/michele-carmagnani-78909a42/"
         />
       </motion.div>
       <Link href="#contact">

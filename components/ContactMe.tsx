@@ -28,11 +28,11 @@ const ContactMe = (props: Props) => {
         <div className="space-y-10">
           <div className="flex items-center justify-center space-x-5">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>+123456789</p>
+            <p>+46704913712</p>
           </div>
           <div className="flex items-center justify-center space-x-5">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>+123456789</p>
+            <p> Västra Frölund _ Sweden </p>
           </div>
           <div className="flex items-center justify-center space-x-5">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
@@ -68,7 +68,7 @@ const ContactMe = (props: Props) => {
             placeholder="Message"
             className="contactInput"
           />
-          <button className="bg-[#F7AB0A] py-5 px-10 rounded-md text-black font-bold text-lg">
+          <button className="bg-[#F7AB0A] hover:bg-yellow-400 py-5 px-10 transition-all  active:scale-95 duration-75 rounded-md text-black font-bold text-lg">
             Submit
           </button>
         </form>

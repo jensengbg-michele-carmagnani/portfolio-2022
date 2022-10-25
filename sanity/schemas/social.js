@@ -13,7 +13,6 @@ export default {
       name: 'url',
       title: 'Url',
       type: 'url',
-
     }
   ],
 };

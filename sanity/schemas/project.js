@@ -5,7 +5,7 @@ export default {
   fields: [
     {
       name: 'title',
-      title: 'Title',
+      title: 'title',
       description: 'Title of the project',
       types: 'string',
     },

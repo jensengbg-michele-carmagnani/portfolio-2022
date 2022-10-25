@@ -1,11 +1,25 @@
-import Image from 'next/image';
-import React from 'react';
-import Quartr from '../public/Quartr.jpeg';
-import { motion } from 'framer-motion';
+import Image from "next/image";
+import React from "react";
+import Quartr from "../public/Quartr.jpeg";
+import { motion } from "framer-motion";
 
-type Props = {};
+type Props = {
+  title: string;
+  description: string;
+  date: {
+    start: string;
+    end: string;
+  };
+  summary: string[];
+};
 
-const ExperienceCard = (props: Props) => {
+const ExperienceCard: React.FC<Props> = ({
+  title,
+  description,
+  date,
+  tech,
+  summary,
+}) => {
   return (
     <article className="flex flex-col rounded-lg items-center space-y-7 flex-shrink-0 w-[500px] md:w-[600px] xl:w-[900px] snap-center bg-[#292929] p-10 hover:opacity-100 opacity-40 cursor-pointer transition-opacity duration-200 overflow-hidden scrollbar-track-gray-400/20 ">
       <motion.div

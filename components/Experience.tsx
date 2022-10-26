@@ -1,10 +1,11 @@
-import { motion } from 'framer-motion';
-import React from 'react';
-import ExperienceCard from './ExperienceCard';
+import { motion } from "framer-motion";
+import React from "react";
+import { Experience } from "../typing";
+import ExperienceCard from "./ExperienceCard";
 
-type Props = {};
+type Props = { experiences: Experience[] };
 
-const Experience = (props: Props) => {
+const Experience: React.FC<Props> = ({ experiences }) => {
   return (
     <motion.div
       initial={{ opacity: 0 }}
@@ -16,9 +17,10 @@ const Experience = (props: Props) => {
         Experience
       </h3>
       <div className="w-full flex space-x-5 overflow-x-scroll p-10 snap-x snap-mandatory scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
-        <ExperienceCard />
-        <ExperienceCard />
-        <ExperienceCard />
+        {experiences.map((experience) => (
+          // eslint-disable-next-line no-underscore-dangle
+          <ExperienceCard key={experience._id} experience={experience} />
+        ))}
       </div>
     </motion.div>
   );

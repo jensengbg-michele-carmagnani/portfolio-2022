@@ -1,10 +1,12 @@
-import { motion } from 'framer-motion';
+import { motion } from "framer-motion";
 
-import React from 'react';
+import React from "react";
+import { urlFor } from "../sanity";
+import { PageInfo } from "../typing";
 
-type Props = {};
+type Props = { pageInfo: PageInfo };
 
-function About({}: Props) {
+const About: React.FC<Props> = ({ pageInfo }) => {
   return (
     <motion.div
       initial={{ opacity: 0, x: 400 }}
@@ -25,28 +27,36 @@ function About({}: Props) {
           x: 1,
         }}
         viewport={{ once: true }}
-        src="https://scontent.fgse1-1.fna.fbcdn.net/v/t39.30808-6/311137544_10160175718509510_5975160762464941417_n.jpg?_nc_cat=104&ccb=1-7&_nc_sid=09cbfe&_nc_ohc=oXq9SvHmXuIAX_uevUt&_nc_ht=scontent.fgse1-1.fna&oh=00_AT-I_d7aZXPbn5X0udMA6SzARfm1jZMCIQq6kMzyodtGjQ&oe=635789B1"
+        src={urlFor(pageInfo.profilePic).url()}
       />
       <div className="space-y-5 px-0 md:max-w-2xl md:px-2">
         <h4 className="text-4xl font-semibold">
-          Here is a little bit of{' '}
+          Here is a little bit of{" "}
           <span className="underline decoration-[#F7AB0A]/50">background</span>
         </h4>
         <p className="text-base text-gray-400">
           My name is Michele I'm sofotware engineer based in Sweden. I'm a
           passionate developer who loves to build project. My main focus is
-          frontend development but I also have experience in backend development. I start to code when I was a teenager and I fell in love with it. I'm a self-taught developer and I'm always looking for new challenges.
+          frontend development but I also have experience in backend
+          development. I start to code when I was a teenager and I fell in love
+          with it. I'm a self-taught developer and I'm always looking for new
+          challenges.
+          {pageInfo.backgroundInformation}
         </p>
         <h2 className="text-gray-300">Education</h2>
         <p className="text-base text-gray-400 ">
-          I took part in course as frontend developer at <span className="underline decoration-yellow-400/70"> Jensen Skolan</span> in Sweden.
-          The course was 2 years long and I learned serveral thinks. I also
-          learned how to work in a team and how to work with a project from
-          scratch.
+          I took part in course as frontend developer at{" "}
+          <span className="underline decoration-yellow-400/70">
+            {" "}
+            Jensen Skolan
+          </span>{" "}
+          in Sweden. The course was 2 years long and I learned serveral thinks.
+          I also learned how to work in a team and how to work with a project
+          from scratch.
         </p>
       </div>
     </motion.div>
   );
-}
+};
 
 export default About;

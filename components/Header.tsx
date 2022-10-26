@@ -1,11 +1,14 @@
-import React from 'react';
-import { SocialIcon } from 'react-social-icons';
-import { motion } from 'framer-motion';
-import Link from 'next/link';
+import React from "react";
+import { SocialIcon } from "react-social-icons";
+import { motion } from "framer-motion";
+import Link from "next/link";
+import { Social } from "../typing";
 
-type Props = {};
+type Props = {
+  socials: Social[];
+};
 
-const Header: React.FC = (props: Props) => {
+const Header: React.FC<Props> = ({ socials }) => {
   return (
     <header className="sticky top-0 p-5 flex items-start justify-between max-w-7xl mx-auto z-20 xl:items-center ">
       <motion.div
@@ -15,7 +18,15 @@ const Header: React.FC = (props: Props) => {
         transition={{ duration: 1.5 }}
       >
         {/* socialIcon */}
-
+        {socials.map((social) => (
+          <SocialIcon
+            // eslint-disable-next-line no-underscore-dangle
+            key={social._id}
+            url={social.url}
+            fgColor="gray"
+            bgColor="transparent"
+          />
+        ))}
         <SocialIcon
           bgColor="transparent"
           fgColor="gray"

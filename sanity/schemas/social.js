@@ -7,7 +7,7 @@ export default {
       name: 'title',
       title: 'Title',
       description: 'Platform social media',
-      types: 'string',
+      type: 'string',
     },
     {
       name: 'url',

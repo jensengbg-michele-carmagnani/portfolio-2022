@@ -7,7 +7,7 @@ export default {
       name: 'title',
       title: 'Title',
       description: 'Title of the skill',
-      types: 'string',
+      type: 'string',
     },
     {
       name: 'progress',

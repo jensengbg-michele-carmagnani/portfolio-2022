@@ -12,12 +12,8 @@
 /.next/
 /out/
 
-# sanity
-sanity/nodule_modules
-
 # production
 /build
-
 
 # misc
 .DS_Store

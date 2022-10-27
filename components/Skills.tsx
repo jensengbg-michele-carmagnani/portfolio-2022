@@ -19,7 +19,7 @@ const Skills: React.FC<Props> = ({ skills }) => {
       <h4 className="absolute top-36 tracking-[3px] text-gray-500 text-sm">
         Hover over a skill for current proficiency{" "}
       </h4>
-      <div className="grid grid-cols-4 gap-5">
+      <div className="grid grid-cols-4  gap-5 ">
         {skills?.slice(0, skills.length / 2).map((skill) => (
           // eslint-disable-next-line no-underscore-dangle
           <Skill key={skill._id} skill={skill} />

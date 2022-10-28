@@ -20,6 +20,7 @@ const ExperienceCard: React.FC<Props> = ({
     points,
     technologies,
     _id,
+    companyUrl,
   },
 }) => {
   return (
@@ -40,36 +41,39 @@ const ExperienceCard: React.FC<Props> = ({
         />
       </motion.div>
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">Web developer</h4>
-        <p className="font-bold text-2xl mt-1">Frontend and backend</p>
+        <h4 className="text-4xl font-light">{jobTitle}</h4>
         <div className="flex justify-center items-center py-5">
-          <Link href="https://quartr.com">
+          <a href={companyUrl} target="blank">
             <img
               src={urlFor(companyImage).url()}
               alt="quartr"
               className="w-40 h-48"
             />
-          </Link>
+          </a>
           <p></p>
         </div>
         <div className="flex space-x-2 my-2">
           {/* tech used*/}
-          {technologies.map((technology) => (
+          {technologies.map((technology, I) => (
             <img
               className="w-10 h-10 rounded-lg object-cover object-center"
-              key={technology._id}
+              key={I}
               src={urlFor(technology.image).url()}
               alt={technology.title}
             />
           ))}
         </div>
         <p className=" text-sm uppercase py-5 text-gray-300">
-          started work {""}
-          {moment(dateStarted).format("MMM Do YY")} - <br />
-          <span>
+          started work: {""}
+          <span className="text-green-200/40 pl-3">
+            {moment(dateStarted).format("MMM Do YY")}{" "}
+          </span>
+          <br />
+          ended:
+          <span className="text-red-300/40 pl-[73px] ">
             {isCurrentlyWorkingHere
               ? "Present"
-              : `ended ${moment(dateEnded).format("MMM Do YY")}`}
+              : ` ${moment(dateEnded).format("MMM Do YY")}`}
           </span>
         </p>
         <ul className="list-disc md:space-y-4 text-sm md:text-lg max-h-96 overscroll-y-scroll scrollbar-thin scrollbar-track-black scrollbar-thumb-[#F7AB0A] ">

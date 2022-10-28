@@ -35,11 +35,11 @@ const About: React.FC<Props> = ({ pageInfo }) => {
           <span className="underline decoration-[#F7AB0A]/50">background</span>
         </h4>
         <p className="text-sm md:text-base text-gray-400">
-          My name is Michele I'm sofotware engineer based in Sweden. I'm a
+          My name is Michele I am sofotware engineer based in Sweden. I am a
           passionate developer who loves to build project. My main focus is
           frontend development but I also have experience in backend
           development. I start to code when I was a teenager and I fell in love
-          with it. I'm a self-taught developer and I'm always looking for new
+          with it. I am a self-taught developer and I am always looking for new
           challenges.
           {pageInfo.backgroundInformation}
         </p>

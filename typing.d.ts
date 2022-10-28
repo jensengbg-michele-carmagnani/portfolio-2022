@@ -46,6 +46,7 @@ export interface Project extends SanityBody {
   linkToBuild: string;
   summary: string;
   technologies: Technology[];
+  githubLink: string;
 }
 export interface Experience extends SanityBody {
   _type: "experience";
@@ -57,6 +58,7 @@ export interface Experience extends SanityBody {
   jobTitle: string;
   points: string[];
   technologies: Technology[];
+  companyUrl: string;
 }
 
 export interface Social extends SanityBody {

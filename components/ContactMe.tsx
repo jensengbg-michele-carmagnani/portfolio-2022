@@ -21,29 +21,29 @@ const ContactMe = (props: Props) => {
         ContactMe
       </h3>
       <div className="flex flex-col space-y-10 pb-5 md:pb-0">
-        <h4 className="text-2xl md:text-4xl font-semibold text-center">
+        <h4 className="text-xl md:text-4xl font-semibold text-center">
           I have got just you need{" "}
           <span className="decoration-[#F7AB0A]/60 underline">Lets talk.</span>
         </h4>
         <div className="space-y-5 md:space-y-10">
-          <div className="flex items-center justify-center space-x-5">
+          <div className="flex items-center justify-start md:justify-center space-x-5">
             <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p>+46704913712</p>
           </div>
-          <div className="flex items-center justify-center space-x-5">
+          <div className="flex items-center justify-start md:justify-center space-x-5">
             <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p> Västra Frölund _ Sweden </p>
           </div>
-          <div className="flex items-center justify-center space-x-5">
+          <div className="flex items-center justify-start md:justify-center space-x-5">
             <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
             <p>michele.carmagnani@gmail.com</p>
           </div>
         </div>
         <form
           onSubmit={handleSubmit(onSubmit)}
-          className="flex flex-col space-y-5 md:space-y-10 md:w-fit md:m-auto"
+          className="flex flex-col md:space-y-2 md:w-fit md:m-auto"
         >
-          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0 md:space-x-5 ">
+          <div className="flex flex-col md:flex-row space-y-2 md:space-y-0  ">
             <input
               {...register("name")}
               placeholder="Name"
@@ -53,7 +53,7 @@ const ContactMe = (props: Props) => {
             <input
               {...register("email")}
               placeholder="Email"
-              className="contactInput"
+              className="contactInput md:ml-2"
               type="email"
             />
           </div>
@@ -66,9 +66,9 @@ const ContactMe = (props: Props) => {
           <textarea
             {...register("message")}
             placeholder="Message"
-            className="contactInput"
+            className="contactInput mt-2"
           />
-          <button className="bg-[#F7AB0A] hover:bg-yellow-400 py-5 px-10 transition-all  active:scale-95 duration-75 rounded-md text-black font-bold text-lg">
+          <button className="bg-[#F7AB0A] hover:bg-yellow-400 py-5 px-10 transition-all mt-2 active:scale-95 duration-75 rounded-md text-black font-bold text-lg">
             Submit
           </button>
         </form>

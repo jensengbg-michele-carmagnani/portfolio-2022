@@ -24,6 +24,11 @@ export default {
       
     },
     {
+      name: 'githubLink',
+      title: 'GithubLink',
+      type: 'url',
+    },
+    {
       name: 'technologies',
       title: 'Technologies',
       type: 'array',

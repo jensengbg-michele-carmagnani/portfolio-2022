@@ -1,8 +1,9 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { Project } from "../typing";
 import { urlFor } from "../sanity";
 import Image from "next/image";
+import GithubIcon from "../Pages/Icons/GithubIcon";
 type Props = { projects: Project[] };
 
 const Projects: React.FC<Props> = ({ projects }) => {
@@ -11,7 +12,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 2 }}
-      className="h-screen relative flex overflow-hidden flex-col test-left md:flex-row max-w-full justify-end md:justify-evenly mx-auto items-center z-0"
+      className="h-screen relative flex flex-col justify-center items-center  md:items-start md:justify-center overflow-hidden text-left md:flex-row max-w-full mx-auto  z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
         Projects
@@ -22,24 +23,35 @@ const Projects: React.FC<Props> = ({ projects }) => {
           <div
             // eslint-disable-next-line no-underscore-dangle
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center p-14 md:p-44 h-full "
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-14 md:p-44 h-full "
           >
-            <motion.img
-              initial={{ y: -300, opacity: 0 }}
-              transition={{ duration: 1.2 }}
-              whileInView={{ y: 0, opacity: 1 }}
-              viewport={{ once: true }}
-              className="object-contain h-80 md:h-[600px] "
-              src={urlFor(project?.image).url()}
-              alt={project.title}
-            />
+            <a
+              href={project?.githubLink}
+              target="_blanck"
+              alt="GitHub"
+              className="w-fit scale-100 transition-all duration-75  hover:scale-95 block"
+            >
+              <motion.img
+                initial={{ y: -300, opacity: 0 }}
+                transition={{ duration: 1.2 }}
+                whileInView={{ y: 0, opacity: 1 }}
+                viewport={{ once: true }}
+                className="cursor-pointer object-contain h-80 md:h-[600px] "
+                src={urlFor(project?.image).url()}
+                alt={project.title}
+              />
+            </a>
 
             <div className="space-y-10 px-0 md:px-10 text-center ">
-              <h4 className="text-2xl md:text-4xl font-semibold ">
-                <span className="underline decoration-yellow-100/40">
+              <h4 className="text-base md:text-2xl font-semibold ">
+                <span className="text-gray-300 underline decoration-yellow-100/40 mr-3">
                   Case Study {i + 1} of {projects.length}
                 </span>{" "}
-                {project?.title}
+                <a href={project?.githubLink} target="_blanck" alt="GitHub">
+                  <span className="transition-all ease-in-out duration-150 hover:text-red-600/60">
+                    {project?.title}
+                  </span>
+                </a>
                 <div className="space-x-2 py-10 flex justify-center items-center">
                   {project?.technologies.map((technology) => (
                     <img
@@ -53,7 +65,8 @@ const Projects: React.FC<Props> = ({ projects }) => {
                 </div>
               </h4>
             </div>
-            <p className="text-lg text-center md:text-left">
+
+            <p className="hidden md:block text-lg text-center   overflow-y-scroll">
               {project?.summary}
             </p>
           </div>

@@ -1,11 +1,13 @@
 import { motion } from "framer-motion";
-import React from "react";
+import React, { useState, useEffect } from "react";
 import { Experience } from "../typing";
 import ExperienceCard from "./ExperienceCard";
 
 type Props = { experiences: Experience[] };
 
 const Experience: React.FC<Props> = ({ experiences }) => {
+  const [sortedExperiences, setSortedExperiences] = useState<Props>();
+
   return (
     <motion.div
       initial={{ opacity: 0 }}

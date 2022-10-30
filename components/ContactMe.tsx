@@ -20,23 +20,23 @@ const ContactMe = (props: Props) => {
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
         ContactMe
       </h3>
-      <div className="flex flex-col space-y-10 pb-5 md:pb-0">
-        <h4 className="text-xl md:text-4xl font-semibold text-center">
+      <div className="flex flex-col space-y-10  pb-5 md:pb-0">
+        <h4 className="hidden sm:block text-xl md:text-4xl font-semibold text-center">
           I have got just you need{" "}
           <span className="decoration-[#F7AB0A]/60 underline">Lets talk.</span>
         </h4>
-        <div className="space-y-5 md:space-y-10">
+        <div className=" space-y-1 md:space-y-10 min-w-[300px]">
           <div className="flex items-center justify-start md:justify-center space-x-5">
-            <PhoneIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>+46704913712</p>
+            <PhoneIcon className="text-[#F7AB0A] h-4 w-4 md:h-7 md:w-7 animate-pulse" />
+            <p className="text-sm md:text-base">+46704913712</p>
           </div>
           <div className="flex items-center justify-start md:justify-center space-x-5">
-            <MapPinIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p> Västra Frölund _ Sweden </p>
+            <MapPinIcon className="text-[#F7AB0A]  h-4 w-4 md:h-7 md:w-7  animate-pulse" />
+            <p className="text-sm md:text-base"> Västra Frölund _ Sweden </p>
           </div>
           <div className="flex items-center justify-start md:justify-center space-x-5">
-            <EnvelopeIcon className="text-[#F7AB0A] h-7 w-7 animate-pulse" />
-            <p>michele.carmagnani@gmail.com</p>
+            <EnvelopeIcon className="text-[#F7AB0A]  h-4 w-4 md:h-7 md:w-7  animate-pulse" />
+            <p className="text-sm md:text-base">michele.carmagnani@gmail.com</p>
           </div>
         </div>
         <form

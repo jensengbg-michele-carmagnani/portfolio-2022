@@ -41,7 +41,9 @@ const ExperienceCard: React.FC<Props> = ({
         />
       </motion.div>
       <div className="px-0 md:px-10">
-        <h4 className="text-4xl font-light">{jobTitle}</h4>
+        <h4 className="text-2xl md:text-4xl text-center pt-10 font-light">
+          {jobTitle}
+        </h4>
         <div className="flex justify-center items-center py-5">
           <a href={companyUrl} target="blank">
             <img

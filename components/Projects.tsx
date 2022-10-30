@@ -14,11 +14,11 @@ const Projects: React.FC<Props> = ({ projects }) => {
       transition={{ duration: 2 }}
       className="h-screen relative flex flex-col justify-center items-center  md:items-start md:justify-center overflow-hidden text-left md:flex-row max-w-full mx-auto  z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl ">
+      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500  text-2xl ">
         Projects
       </h3>
 
-      <div className="reltive w-full flex overflow-x-scroll  overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
+      <div className="reltive w-full flex overflow-x-scroll pt-20 md:pt-0  overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
         {projects.map((project, i) => (
           <div
             // eslint-disable-next-line no-underscore-dangle
@@ -28,14 +28,14 @@ const Projects: React.FC<Props> = ({ projects }) => {
             <a
               href={project?.githubLink}
               target="_blanck"
-              className="w-fit scale-100 transition-all duration-75  hover:scale-95 block"
+              className="w-fit scale-100 transition-all duration-100  hover:scale-95 block"
             >
               <motion.img
                 initial={{ y: -300, opacity: 0 }}
                 transition={{ duration: 1.2 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="cursor-pointer object-contain h-80 md:h-[600px] "
+                className="cursor-pointer object-contain h-56 md:h-[600px] "
                 src={urlFor(project?.image).url()}
                 alt={project.title}
               />

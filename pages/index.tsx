@@ -66,10 +66,8 @@ const Home: NextPage<Props> = ({
       <section id="contact" className="snap-center">
         <ContactMe />
       </section>
-      <section>
-        <Link href="#hero">
+      <section className=" cursor-pointer absolute top-[90%] left-[80%] z-22">
           <Footer />
-        </Link>
       </section>
     </div>
   );

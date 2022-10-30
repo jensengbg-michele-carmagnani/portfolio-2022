@@ -3,7 +3,7 @@ import { motion } from "framer-motion";
 import { Project } from "../typing";
 import { urlFor } from "../sanity";
 import Image from "next/image";
-import GithubIcon from "../Pages/Icons/GithubIcon";
+
 type Props = { projects: Project[] };
 
 const Projects: React.FC<Props> = ({ projects }) => {
@@ -23,12 +23,11 @@ const Projects: React.FC<Props> = ({ projects }) => {
           <div
             // eslint-disable-next-line no-underscore-dangle
             key={project._id}
-            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-14 md:p-44 h-full "
+            className="w-screen flex-shrink-0 snap-center flex flex-col space-y-5 justify-center items-center p-14  md:p-44 h-full "
           >
             <a
               href={project?.githubLink}
               target="_blanck"
-              alt="GitHub"
               className="w-fit scale-100 transition-all duration-75  hover:scale-95 block"
             >
               <motion.img
@@ -47,7 +46,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
                 <span className="text-gray-300 underline decoration-yellow-100/40 mr-3">
                   Case Study {i + 1} of {projects.length}
                 </span>{" "}
-                <a href={project?.githubLink} target="_blanck" alt="GitHub">
+                <a href={project?.githubLink} target="_blanck">
                   <span className="transition-all ease-in-out duration-150 hover:text-red-600/60">
                     {project?.title}
                   </span>

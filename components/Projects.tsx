@@ -12,7 +12,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
       initial={{ opacity: 0 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{ duration: 2 }}
-      className="h-screen relative flex flex-col justify-center items-center  md:items-start md:justify-center overflow-hidden text-left md:flex-row max-w-full mx-auto  z-0"
+      className="h-screen relative flex flex-col justify-center items-center  md:items-start md:justify-center overflow-hidden text-left md:flex-row max-w-full mx-auto z-0"
     >
       <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500  text-2xl ">
         Projects
@@ -35,7 +35,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
                 transition={{ duration: 1.2 }}
                 whileInView={{ y: 0, opacity: 1 }}
                 viewport={{ once: true }}
-                className="cursor-pointer object-contain h-56 md:h-[600px] "
+                className="cursor-pointer object-contain h-56 md:h-[270px] "
                 src={urlFor(project?.image).url()}
                 alt={project.title}
               />

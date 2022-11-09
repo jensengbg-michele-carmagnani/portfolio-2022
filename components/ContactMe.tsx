@@ -16,12 +16,12 @@ const ContactMe = (props: Props) => {
     window.location.href = `mailto:michele.carmagnani@gmail.com?subject=${formData.subject}&body=Hi, my name is ${formData.name}. ${formData.message}[${formData.email}]`;
   };
   return (
-    <div className="pb-7 h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-5 justify-end md:justify-center items-center mx-auto">
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500 text-2xl">
+    <div className="pb-7 h-screen flex relative flex-col text-center md:text-left md:flex-row  max-w-7xl px-5 justify-center items-center mx-auto pt-20">
+      <h3 className="absolute top-24 md:top-14 uppercase tracking-[20px] text-gray-500 text-2xl">
         ContactMe
       </h3>
       <div className="flex flex-col space-y-10  pb-5 md:pb-0">
-        <h4 className="hidden sm:block text-xl md:text-4xl font-semibold text-center">
+        <h4 className="hidden sm:block text-xl md:text-2xl font-semibold text-center">
           I have got just you need{" "}
           <span className="decoration-[#F7AB0A]/60 underline">Lets talk.</span>
         </h4>

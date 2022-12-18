@@ -1,20 +1,20 @@
-import type { GetStaticProps, NextPage } from "next";
-import Head from "next/head";
-import Link from "next/link";
-import About from "../components/About";
-import ContactMe from "../components/ContactMe";
-import WorkExperience from "../components/Experience";
-import Footer from "../components/Footer";
-import Header from "../components/Header";
-import Hero from "../components/Hero";
-import Projects from "../components/Projects";
-import Skills from "../components/Skills";
-import { fetchPageInfo } from "../helpers/fetchPageInfo";
-import { fetchProjects } from "../helpers/fetchProjects";
-import { fetchSkills } from "../helpers/fetchSkills";
-import { fetchSocials } from "../helpers/fetchSocials";
-import { fetchExperiences } from "../helpers/getExperience";
-import { Experience, Skill, PageInfo, Project, Social } from "../typing";
+import type { GetStaticProps, NextPage } from 'next';
+import Head from 'next/head';
+import Link from 'next/link';
+import About from '../components/About';
+import ContactMe from '../components/ContactMe';
+import WorkExperience from '../components/Experience';
+import Footer from '../components/Footer';
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import Projects from '../components/Projects';
+import Skills from '../components/Skills';
+import { fetchPageInfo } from '../helpers/fetchPageInfo';
+import { fetchProjects } from '../helpers/fetchProjects';
+import { fetchSkills } from '../helpers/fetchSkills';
+import { fetchSocials } from '../helpers/fetchSocials';
+import { fetchExperiences } from '../helpers/getExperience';
+import { Experience, Skill, PageInfo, Project, Social } from '../typing';
 
 type Props = {
   pageInfo: PageInfo;
@@ -35,7 +35,7 @@ const Home: NextPage<Props> = ({
     <div className="h-screen bg-[rgb(36,36,36)] text-white  snap-y snap-mandatory overflow-scroll z-0 scroll-smooth overflow-x-hidden scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
       <Head>
         <title className="text-green-500 text-3xl">
-          {pageInfo?.name} - Portfolio{" "}
+          {pageInfo?.name} - Portfolio{' '}
         </title>
       </Head>
 
@@ -67,7 +67,7 @@ const Home: NextPage<Props> = ({
         <ContactMe />
       </section>
       <section className=" cursor-pointer absolute top-[90%] left-[80%] z-22">
-          <Footer />
+        <Footer />
       </section>
     </div>
   );

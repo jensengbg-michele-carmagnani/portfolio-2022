@@ -1,7 +1,7 @@
-import { motion } from "framer-motion";
-import React, { useState, useEffect } from "react";
-import { Experience } from "../typing";
-import ExperienceCard from "./ExperienceCard";
+import { motion } from 'framer-motion';
+import React, { useState } from 'react';
+import { Experience } from '../typing';
+import ExperienceCard from './ExperienceCard';
 
 type Props = { experiences: Experience[] };
 

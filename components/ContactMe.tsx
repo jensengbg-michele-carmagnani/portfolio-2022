@@ -22,7 +22,7 @@ const ContactMe = (props: Props) => {
       </h3>
       <div className="flex flex-col space-y-10  pb-5 md:pb-0">
         <h4 className="hidden sm:block text-xl md:text-2xl font-semibold text-center">
-          I have got just you need{" "}
+          I have got you need{" "}
           <span className="decoration-[#F7AB0A]/60 underline">Lets talk.</span>
         </h4>
         <div className=" space-y-1 md:space-y-10 min-w-[300px]">

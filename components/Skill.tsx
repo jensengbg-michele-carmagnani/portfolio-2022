@@ -1,9 +1,7 @@
-import { motion } from "framer-motion";
-import React from "react";
-import Valtech from "../public/valtech.jpeg";
-import Quartr from "../public/Quartr.jpeg";
-import { Skill } from "../typing";
-import { urlFor } from "../sanity";
+import { motion } from 'framer-motion';
+import React from 'react';
+import { Skill } from '../typing';
+import { urlFor } from '../sanity';
 
 type Props = { directinLeft?: boolean; skill: Skill };
 

@@ -1,8 +1,7 @@
-import React, { useState, useEffect } from "react";
-import { motion } from "framer-motion";
-import { Project } from "../typing";
-import { urlFor } from "../sanity";
-import Image from "next/image";
+import React from 'react';
+import { motion } from 'framer-motion';
+import { Project } from '../typing';
+import { urlFor } from '../sanity';
 
 type Props = { projects: Project[] };
 
@@ -45,7 +44,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
               <h4 className="text-base md:text-2xl font-semibold ">
                 <span className="text-gray-300 underline decoration-yellow-100/40 mr-3">
                   Case Study {i + 1} of {projects.length}
-                </span>{" "}
+                </span>{' '}
                 <a href={project?.githubLink} target="_blanck">
                   <span className="transition-all ease-in-out duration-150 hover:text-red-600/60">
                     {project?.title}

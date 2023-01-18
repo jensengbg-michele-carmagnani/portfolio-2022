@@ -1,11 +1,9 @@
-import Image from "next/image";
-import React from "react";
-import profilePic from "../public/profilePic.jpeg";
-import { Cursor, useTypewriter } from "react-simple-typewriter";
-import BackgroundCircle from "./BackgroundCircle";
-import Link from "next/link";
-import { PageInfo } from "../typing";
-import { urlFor } from "../sanity";
+import React from 'react';
+import { Cursor, useTypewriter } from 'react-simple-typewriter';
+import BackgroundCircle from './BackgroundCircle';
+import Link from 'next/link';
+import { PageInfo } from '../typing';
+import { urlFor } from '../sanity';
 
 type Props = { pageInfo: PageInfo };
 

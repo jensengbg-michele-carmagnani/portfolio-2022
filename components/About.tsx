@@ -6,6 +6,7 @@ import { PageInfo } from '../typing';
 type Props = { pageInfo: PageInfo };
 
 const About: React.FC<Props> = ({ pageInfo }) => {
+  console.log(pageInfo.profilePic,"-------------->");
   return (
     <motion.div
       initial={{ opacity: 0, x: 300 }}

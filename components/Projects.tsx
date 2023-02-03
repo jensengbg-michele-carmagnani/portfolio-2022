@@ -17,7 +17,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
         Projects
       </h3>
 
-      <div className="reltive h-screen w-full flex overflow-x-scroll pt-20 md:pt-0  overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
+      <div className="relative h-screen w-full flex overflow-x-scroll pt-20 md:pt-0  overflow-y-hidden snap-x snap-mandatory z-20 scrollbar-track-gray-400/20 scrollbar-thumb-[#F7AB0A] scrollbar-thin">
         {projects.map((project, i) => (
           <div
             // eslint-disable-next-line no-underscore-dangle
@@ -26,7 +26,8 @@ const Projects: React.FC<Props> = ({ projects }) => {
           >
             <a
               href={project?.githubLink}
-              target="_blanck"
+              target="_blank"
+              rel="noreferrer"
               className="w-fit scale-100 transition-all duration-100  hover:scale-95 block"
             >
               <motion.img
@@ -64,7 +65,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
               </h4>
             </div>
 
-            <p className="hidden md:block text-lg text-center   overflow-y-scroll">
+            <p className="hidden md:flex text-lg text-center ">
               {project?.summary}
             </p>
           </div>

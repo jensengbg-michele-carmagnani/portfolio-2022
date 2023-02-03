@@ -4,6 +4,7 @@ import BackgroundCircle from './BackgroundCircle';
 import Link from 'next/link';
 import { PageInfo } from '../typing';
 import { urlFor } from '../sanity';
+import PortableComponents from './PortableComponent';
 
 type Props = { pageInfo: PageInfo };
 

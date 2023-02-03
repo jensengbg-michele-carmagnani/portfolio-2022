@@ -23,8 +23,16 @@ export default {
     },
     {
       name: 'backgroundInformation',
-      title: 'BackgroundInformation',
-      type: 'string',
+      title: 'Background Information',
+      type: 'array',
+      of: [
+        {
+          title: 'Block',
+          type: 'block',
+          styles: [{title: 'Normal', value: 'normal'}],
+          lists: [],
+        },
+      ],
     },
     {
       name: 'profilePic',

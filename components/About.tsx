@@ -2,11 +2,11 @@ import React from 'react';
 import { motion } from 'framer-motion';
 import { urlFor } from '../sanity';
 import { PageInfo } from '../typing';
+import PortableComponent from './PortableComponent';
 
 type Props = { pageInfo: PageInfo };
 
 const About: React.FC<Props> = ({ pageInfo }) => {
-  console.log(pageInfo.profilePic,"-------------->");
   return (
     <motion.div
       initial={{ opacity: 0, x: 300 }}
@@ -34,15 +34,9 @@ const About: React.FC<Props> = ({ pageInfo }) => {
           Here is a little bit of{' '}
           <span className="underline decoration-[#F7AB0A]/50">background</span>
         </h4>
-        <p className="text-sm md:text-base text-gray-400">
-          My name is Michele I am software engineer based in Sweden. I am a
-          passionate developer who loves to build project. My main focus is
-          frontend development but I also have experience in backend
-          development. I start to code when I was a teenager and I fell in love
-          with it. I am a self-taught developer and I am always looking for new
-          challenges.
-          {pageInfo.backgroundInformation}
-        </p>
+        <div className="text-sm md:text-base text-gray-400">
+          <PortableComponent text={pageInfo.backgroundInformation} />
+        </div>
         <h2 className="text-gray-300">Education</h2>
         <p className="text-sm md:text-base text-gray-400 ">
           I took part in course as frontend developer at{' '}

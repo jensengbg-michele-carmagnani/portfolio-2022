@@ -13,7 +13,7 @@ const Projects: React.FC<Props> = ({ projects }) => {
       transition={{ duration: 2 }}
       className="h-screen relative flex flex-col justify-center items-center  md:items-start md:justify-center overflow-hidden text-left md:flex-row max-w-full mx-auto z-0"
     >
-      <h3 className="absolute top-24 uppercase tracking-[20px] text-gray-500  text-2xl ">
+      <h3 className="absolute top-20 uppercase tracking-[20px] text-gray-500  text-2xl ">
         Projects
       </h3>
 

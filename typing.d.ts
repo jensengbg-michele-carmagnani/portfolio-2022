@@ -1,3 +1,4 @@
+import { Block } from 'typings';
 interface SanityBody {
   _createAt: string;
   _id: string;
@@ -16,7 +17,7 @@ interface Image {
 export interface PageInfo extends SanityBody {
   _type: 'pageInfo';
   address: string;
-  backgroundInformation: string;
+  backgroundInformation: Block[];
   email: string;
   role: string;
   heroImage: Image;
